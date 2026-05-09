@@ -2,5 +2,5 @@ homepage: "https://github.com/hashbookies"
 documentation: "https://github.com/hashbookies/gtm-spa-virtual-pageview#readme"
 
 versions:
-  - sha: "1dffcf4ba2d90f8b0214288996db18db8d89a5bc"
+  - sha: "63a6fc8a77a2adea0efc8fe317f7927a090b4380"
     changeNotes: "Initial release."
