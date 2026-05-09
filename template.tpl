@@ -10,7 +10,7 @@ ___INFO___
 
 {
   "type": "TAG",
-  "id": "cvt_dd_spa_virtual_pageview",
+  "id": "cvt_tk_spa_virtual_pageview",
   "version": 1,
   "displayName": "SPA Virtual Pageview",
   "categories": [
@@ -34,7 +34,7 @@ ___TEMPLATE_PARAMETERS___
     "name": "eventName",
     "displayName": "Event Name",
     "simpleValueType": true,
-    "defaultValue": "page_view",
+    "defaultValue": "spa_virtual_pageview",
     "help": "Event name to push to the dataLayer.",
     "valueValidators": [
       {
@@ -132,7 +132,7 @@ const buildPagePath = function() {
 
 const pushPageview = function() {
   const dataLayerName = normalize(data.dataLayerName) || 'dataLayer';
-  const eventName = normalize(data.eventName) || 'page_view';
+  const eventName = normalize(data.eventName) || 'spa_virtual_pageview';
   const pageLocation = normalize(getUrl());
   const pagePath = buildPagePath();
   const pageTitle = normalize(readTitle());

@@ -53,7 +53,7 @@ This template pushes a virtual pageview event to the dataLayer. It does not send
 Default:
 
 ```text
-page_view
+spa_virtual_pageview
 ```
 
 ### Data Layer Name
@@ -84,7 +84,7 @@ Logs pushed payloads and duplicate skips in supported debug environments.
 
 ```js
 {
-  event: 'page_view',
+  event: 'spa_virtual_pageview',
   page_location: 'https://example.com/pricing?plan=pro',
   page_path: '/pricing?plan=pro',
   page_title: 'Pricing',
@@ -95,18 +95,17 @@ Logs pushed payloads and duplicate skips in supported debug environments.
 
 ## GA4 handoff example
 
-Create a GA4 Event tag that fires on the custom event:
+Create a GA4 Event tag that:
 
-```text
-page_view
-```
+1. Fires on a Custom Event trigger matching `spa_virtual_pageview`.
+2. Sends the GA4 event name `page_view`.
+3. Maps event parameters from dataLayer variables:
+   - `page_location`
+   - `page_path`
+   - `page_title`
+   - `page_referrer`, if used
 
-Map event parameters from dataLayer variables:
-
-- `page_location`
-- `page_path`
-- `page_title`
-- `page_referrer`, if used
+This separation keeps the dataLayer event distinct from the GA4 event, reducing debug and duplicate confusion.
 
 ## Duplicate pageview warning
 
