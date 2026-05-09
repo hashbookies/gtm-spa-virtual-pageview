@@ -16,7 +16,7 @@ ___INFO___
   "categories": [
     "ANALYTICS",
     "TAG_MANAGEMENT",
-    "UTILITY"
+    "UTILITIES"
   ],
   "description": "Pushes clean virtual pageview events to the dataLayer for single-page applications and headless frontends.",
   "containerContexts": [
